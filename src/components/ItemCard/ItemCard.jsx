@@ -3,18 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import styles from './styles.css';
 
-function ItemCard() {
+function ItemCard({product}) {
 
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src='https://img.freepik.com/fotos-premium/diseno-paquetes-bolsas-comida-perros-sobre-fondo-blanco-representacion-3d_476612-10555.jpg?w=2000' />
+        <Card className='itemCards' style={{ width: '16rem', height: '27rem' }}>
+            <Card.Img className='cardsImg' variant="top" src={product.img} style={{height: '50%'}}/>
             <Card.Body>
-                <Card.Title>Card Title</Card.Title>
-                <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
-                </Card.Text>
-                <Button className="btn btn-success">Go somewhere</Button>
+                <Card.Title>{product.name}</Card.Title>
+                <Card.Text>{product.description}</Card.Text>
+                <Button variant="outline-success" className="buyButton">Buy product</Button>
             </Card.Body>
         </Card>
     );
