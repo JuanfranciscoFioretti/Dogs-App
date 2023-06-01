@@ -3,7 +3,7 @@ import styles from './styles.css'
 
 const ItemCount = () => {
 
-    const [ count, setCount ] = useState(0);
+    const [ count, setCount ] = useState(1);
 
     const addQuantity = () => {
         const addingQuantity = count + 1;

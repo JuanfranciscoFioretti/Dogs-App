@@ -1,10 +1,10 @@
 import React from 'react'
-import NavBar from './components/NavBar/NavBar';
-import ItemCount from './components/ItemCount/ItemCount';
-import ItemListContainer from './containers/ItemListContainer/ItemListContainer.jsx';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import styles from './styles.css';
+import NavBar from './components/NavBar/NavBar';
+import ItemListContainer from './containers/ItemListContainer/ItemListContainer.jsx';
 import ItemDetailContainer from './containers/ItemDetailContainer/ItemDetailContainer';
+import ItemDetail from './components/ItemDetail/ItemDetail';
 
 const App = () => {
     return (
@@ -14,11 +14,10 @@ const App = () => {
                 <Routes>
                     <Route path='/' element={<ItemListContainer/>} />
                     <Route path='/categorie/:categorieId' element={<ItemListContainer/>} />
-                    <Route path='/categorie/:detailId' element={<ItemDetailContainer/>} />
+                    <Route path='/product/:id' element={<ItemDetailContainer/>} />
+                    <Route path='/product/:id' element={<ItemDetail/>} />
                 </Routes>
             </div>
-
-            <ItemCount/>
         </BrowserRouter>
     )
 }
