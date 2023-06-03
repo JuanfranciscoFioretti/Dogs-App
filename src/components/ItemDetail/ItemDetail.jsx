@@ -20,7 +20,11 @@ const ItemDetail = ({loader, product, id}) => {
                 <h2>{product.description}</h2>
                 <ItemCount/>
 
-                <ItemCard product={product}/>
+                {/* <ItemCard product={product}/> */}
+
+                <Link to='/cart'>
+                    <button className='btn btn-success'>Go to cart</button>
+                </Link>
 
                 <Link to='/'>
                     <button className='btn btn-success'>Go Back</button>
@@ -50,4 +54,4 @@ const ItemDetail = ({loader, product, id}) => {
     )
 }
 
-export default ItemDetail
+export default ItemDetail;

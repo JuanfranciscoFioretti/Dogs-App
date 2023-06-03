@@ -1,3 +1,4 @@
-/* #divContainerMappingProducts {
-    display: table-row;
-} */
+#divContainerMappingProducts {
+    display: flex;
+    flex-direction: row;
+}

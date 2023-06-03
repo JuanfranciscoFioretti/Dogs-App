@@ -11,3 +11,8 @@
 .buyButton:hover {
     background-color: #03561e !important;
 }
+
+#divContainerProducts {
+    display: flex;
+    flex-direction: column;
+}

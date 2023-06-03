@@ -4,7 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.css';
-import CartItem from '../Cart/CartItem';
+// import CartItem from '../Cart/CartItem';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Button from 'react-bootstrap/Button';
 // import Form from 'react-bootstrap/Form';

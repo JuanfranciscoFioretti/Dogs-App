@@ -35,15 +35,17 @@ const ItemList = ({ loader, products}) => {
     return (
 
         <div id='divContainerMappingProducts'>
-            {
-                loader ? 
+            {/* <div id='divContainerProducts'> */}
+                {
+                    loader ? 
 
-                    <Loader/>
-                    :
-                    products.map((product) => 
-                        <ItemCard key={product.id} product={product}/>
-                    )
-            }
+                        <Loader/>
+                        :
+                        products.map((product) => 
+                            <ItemCard key={product.id} product={product}/>
+                        )
+                }
+            {/* </div> */}
         </div>
     )
 }
