@@ -1,8 +1,8 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import ItemCard from '../ItemCard/ItemCard';
 import Loader from '../Loader/Loader';
 import styles from './styles.css';
-// import { useParams } from 'react-router-dom';
 // import  {getProducts}  from '../../utils/Products'
 
 const ItemList = ({ loader, products}) => {
@@ -14,7 +14,7 @@ const ItemList = ({ loader, products}) => {
                 loader ? 
                     <Loader/>
                     :
-                    products.map((product) => 
+                    products.map(product => 
                         <ItemCard key={product.id} product={product}/>
                     )
             }
