@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../../Context/CartContext';
+import { Link } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { Link } from 'react-router-dom';
 import styles from './styles.css';
 
 const ItemCard = ({product}) => {
 
     return (
-        <Link to={`/product/:${product.id}`}>
+        <Link to={`/product/${product.id}`}>
             <div id='divContainerProducts'>
                 <Card className='itemCards' style={{ width: '16rem', height: '27rem' }}>
                     <Card.Img className='cardsImg' variant="top" src={product.img} style={{height: '50%'}}/>

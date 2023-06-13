@@ -13,3 +13,8 @@
 .navLinkBlack{
     color: #092b14;
 }
+
+.cartWidgetMainNavBar {
+    display: flex;
+    justify-items: flex-end;
+}

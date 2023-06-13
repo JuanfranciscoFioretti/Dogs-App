@@ -20,7 +20,6 @@ const ItemDetailContainer = () => {
             .finally(setLoader(false));
     }, [id])
 
-    console.log("Products ItemDetailContainer: ", product.data, 'Product ID: ', id)
     return (
         <div>
             <ItemDetail loader={loader} product={product}/>

@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { NavLink } from 'react-router-dom';
 import styles from './styles.css';
+import CartWidget from '../CartWidget/CartWidget';
 // import CartItem from '../Cart/CartItem';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Button from 'react-bootstrap/Button';
@@ -17,6 +18,7 @@ const NavBar = () => {
                 <Navbar key={expand} bg="light" expand={expand} className="mb-3">
                 <Container fluid>
                 <NavLink className='navLink' to='/'>Paw's Home</NavLink>
+                <NavLink className='navLink navLinkBlack' to='/cart'><CartWidget className='cartWidgetMainNavBar'/></NavLink>
                     <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
                     <Navbar.Offcanvas
                     id={`offcanvasNavbar-expand-${expand}`}
@@ -26,6 +28,7 @@ const NavBar = () => {
                     <Offcanvas.Header closeButton>
                         <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                             <NavLink className='navLink navLinkBlack' to='/'>Paw's Home</NavLink>
+                            <NavLink className='navLink navLinkBlack' to='/cart'><CartWidget/></NavLink>
                         </Offcanvas.Title>
                     </Offcanvas.Header>
                     <Offcanvas.Body>
@@ -34,6 +37,7 @@ const NavBar = () => {
                         <NavLink className='navLink' to='/categorie/Pets'>Pets</NavLink>
                         <NavLink className='navLink' to='/categorie/Dogs'>Dogs</NavLink>
                         <NavLink className='navLink' to='/categorie/Cats'>Cats</NavLink>
+                        <NavLink className='navLink' to='/categorie/Cats'></NavLink>
                         {/* <NavLink className='navLink' to='/'><CartItem/></NavLink> */}
                         {   
                             /* <NavDropdown
