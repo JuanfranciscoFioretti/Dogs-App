@@ -12,11 +12,11 @@ const ItemDetail = ({loader, product}) => {
     // const { name, price, stock, description, img } = product;
     const [ goToCart, setGoToCart ] = useState(false);
 
-    const { addProduct, clearCart, isInCart, removeProduct, } = useCartContext();
+    const { addProduct, onAdd, isInCart, removeProduct, clearCart } = useCartContext();
 
-    const onAdd = (quantity) => {
-        addProduct(product, quantity);
-    } 
+    // const onAdd = (quantity) => {
+    //     addProduct(product, quantity);
+    // } 
     return (
         <div className='row'>
             <div className='col'>
@@ -36,6 +36,10 @@ const ItemDetail = ({loader, product}) => {
                                     :
                                     <ItemCount onAdd={onAdd} clearCart={clearCart} isInCart={isInCart} removeProduct={removeProduct} goToCart={goToCart} />
                             }
+
+                            {/* <Link to='/cart'> */}
+                            <button className='btn btn-success' onClick={addProduct}>Add to cart</button>
+                            {/* </Link> */}
 
                             <Link to='/cart'>
                                 <button className='btn btn-success'>Go to cart</button>

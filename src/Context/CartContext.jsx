@@ -21,14 +21,25 @@ const CartProvider = ({ children }) => {
             }))
             : 
             setCart([...cart, { ...product, quantity}]);
+            console.log('cart: ', cart.quantity, 'product: ', product.id, 'quantity: ', cart.quantity);
+    }
+
+    const onAdd = (product, quantity) => {
+        addProduct(product, quantity);
+    }
+
+    const showCart = () => {
+        console.log('Cart: ', cart);
     }
 
     return (
         <CartContext.Provider value={{ 
-            clearCart,
+            addProduct,
+            onAdd,
             isInCart,
             removeProduct,
-            addProduct
+            clearCart,
+            showCart
         }}>
             { children }
         </CartContext.Provider>
