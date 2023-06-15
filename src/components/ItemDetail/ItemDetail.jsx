@@ -34,14 +34,14 @@ const ItemDetail = ({loader, product}) => {
                                 goToCart ? 
                                     <Link to='/cart'>Finish your purchase</Link>
                                     :
-                                    <ItemCount onAdd={onAdd} clearCart={clearCart} isInCart={isInCart} removeProduct={removeProduct} goToCart={goToCart} />
+                                    <ItemCount onAdd={onAdd} addProduct={addProduct} product={product} clearCart={clearCart} isInCart={isInCart} removeProduct={removeProduct} goToCart={goToCart} />
                             }
 
                             {/* <Link to='/cart'> */}
-                            <button className='btn btn-success' onClick={addProduct}>Add to cart</button>
+                            {/* <button className='btn btn-success' onClick={addProduct}>Add to cart</button> */}
                             {/* </Link> */}
 
-                            <Link to='/cart'>
+                            <Link to='/cart' products={product}>
                                 <button className='btn btn-success'>Go to cart</button>
                             </Link>
 

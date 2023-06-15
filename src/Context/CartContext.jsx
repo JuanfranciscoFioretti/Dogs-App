@@ -7,6 +7,8 @@ export const useCartContext = () => useContext(CartContext);
 const CartProvider = ({ children }) => {
 
     const [ cart, setCart ] = useState([]);
+
+    const [ product, setProduct ] = useState({});
     
     const clearCart = () => { setCart([]) };
 
@@ -24,9 +26,9 @@ const CartProvider = ({ children }) => {
             console.log('cart: ', cart.quantity, 'product: ', product.id, 'quantity: ', cart.quantity);
     }
 
-    const onAdd = (product, quantity) => {
-        addProduct(product, quantity);
-    }
+    // const onAdd = (product, quantity) => {
+    //     addProduct(product, quantity);
+    // }
 
     const showCart = () => {
         console.log('Cart: ', cart);
@@ -35,11 +37,12 @@ const CartProvider = ({ children }) => {
     return (
         <CartContext.Provider value={{ 
             addProduct,
-            onAdd,
             isInCart,
             removeProduct,
             clearCart,
-            showCart
+            showCart,
+            product,
+            // onAdd,
         }}>
             { children }
         </CartContext.Provider>

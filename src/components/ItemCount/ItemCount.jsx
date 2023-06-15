@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import styles from './styles.css';
 
-const ItemCount = ({ onAdd, clearCart, isInCart, removeProduct }) => {
+
+// onAdd,
+const ItemCount = ({  addProduct, product, clearCart, removeProduct }) => {
 
     const [ count, setCount ] = useState(1);
+
+    // const productSetted = product;
 
     const addQuantity = () => {
         // onAdd();
@@ -28,6 +32,10 @@ const ItemCount = ({ onAdd, clearCart, isInCart, removeProduct }) => {
         setCount(0);
     }
 
+    const addToCart = (productSetted, count) => {
+        addProduct(productSetted, count);
+    }
+
     return (
         <div className='itemCountContainer'>
             <h3 className='titleItemCount'>This is the item count</h3>
@@ -46,6 +54,11 @@ const ItemCount = ({ onAdd, clearCart, isInCart, removeProduct }) => {
                     className='btn btn-secondary'
                     onClick={clearCartQuantity}>
                         {'Clear Cart'}
+                </button>
+                <button 
+                    className='btn btn-secondary'
+                    onClick={addToCart}>
+                        {'Add to Cart'}
                 </button>
             </div>
             <div className='itemCountDisplay'>
