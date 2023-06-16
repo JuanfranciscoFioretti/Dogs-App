@@ -23,7 +23,7 @@ const CartProvider = ({ children }) => {
             }))
             : 
             setCart([...cart, { ...product, quantity}]);
-            console.log('cart: ', cart.quantity, 'product: ', product.id, 'quantity: ', cart.quantity);
+            console.log('cart: ', cart.length, 'product: ', product.id, product.quantity, 'quantity: ', cart.quantity);
     }
 
     // const onAdd = (product, quantity) => {
@@ -41,6 +41,7 @@ const CartProvider = ({ children }) => {
             removeProduct,
             clearCart,
             showCart,
+            cart,
             product,
             // onAdd,
         }}>

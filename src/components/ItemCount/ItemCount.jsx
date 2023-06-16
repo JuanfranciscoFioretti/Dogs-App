@@ -57,7 +57,7 @@ const ItemCount = ({  addProduct, product, clearCart, removeProduct }) => {
                 </button>
                 <button 
                     className='btn btn-secondary'
-                    onClick={addToCart}>
+                    onClick={() => addToCart(product, count)}>
                         {'Add to Cart'}
                 </button>
             </div>
