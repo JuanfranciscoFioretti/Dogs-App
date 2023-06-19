@@ -10,7 +10,7 @@ const CartProvider = ({ children }) => {
 
     const [ product, setProduct ] = useState({});
     
-    const clearCart = () => { setCart([]) };
+    const clearCart = () => { setCart([])};
 
     const isInCart = (id) => cart.find(product => product.id === id) ? true : false;
 
@@ -25,6 +25,12 @@ const CartProvider = ({ children }) => {
             setCart([...cart, { ...product, quantity}]);
             console.log('cart: ', cart.length, 'product: ', product.id, product.quantity, 'quantity: ', cart.quantity);
     }
+
+    const totalPrice = () => {
+        return cart.reduce((prev, act) => prev + act.quantity * act.price, 0);
+    }
+
+    const totalProducts = () => { cart.reduce((acc, product) => acc + product.quantity, 0)}
 
     // const onAdd = (product, quantity) => {
     //     addProduct(product, quantity);
@@ -41,9 +47,10 @@ const CartProvider = ({ children }) => {
             removeProduct,
             clearCart,
             showCart,
+            totalPrice,
+            totalProducts,
             cart,
             product,
-            // onAdd,
         }}>
             { children }
         </CartContext.Provider>

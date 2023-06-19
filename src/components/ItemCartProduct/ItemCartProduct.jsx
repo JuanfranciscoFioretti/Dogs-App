@@ -1,16 +1,17 @@
 import React from 'react';
+import styles from './styles.css';
 
 const ItemCartProduct = ({product}) => {
     return (
-        <div>
-            <h1>This is the Item Cart</h1>
-            <p className='pItemCart'>Title: {product.name}</p>
-            <p className='pItemCart'>Price: {product.price}</p>
-            <p className='pItemCart'>Quantity: {product.quantity}</p>
-            <img src={product?.img} alt="" height={130}/>
-            {/* <p className='pItemCart'>Title: {product.title}</p> */}
-                
-            {/* <button className='btn btn-success' onClick={showCart}>Show Me The Cart</button> */}
+        <div className='divItemCartProduct'>
+            <div className='divColumnCartProduct'>
+                <h1>{product.name}</h1>
+                <p className='pItemCart'>Price: {product.price}</p>
+                <p className='pItemCart'>Quantity: {product.quantity}</p>
+            </div>
+            <div className='divColumnCartProduct'>
+                <img className='imgCart' src={product?.img} alt="" height={130}/>
+            </div>
         </div>
     )
 }
