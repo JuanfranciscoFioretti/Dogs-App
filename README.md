@@ -72,3 +72,35 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 =======
 # Dogs-App
 >>>>>>> 181f118adc559469da2596ed763ba88655167362 -->
+
+
+## Hola! Esto es DogsApp el proyecto de Juan.
+### Aquí encontrarás un eccomerce de productos para mascotas, luego iran creciendo las funcionalidades, y poder realizar compras dentro de la app. 
+
+### Funcionalidades
+
+- Visualizar productos traidos desde una base de datos Firebase firestore **(Componente ItemList)**;
+- Visualizar el detalle de los productos **(Componente ItemDetail)**;
+- Agregar productos al carrito creado con context;
+- Cargar orden de compra con el detalle del carrito a Firebase;
+
+
+## Tecnologías utilizadas
+
+- React.js: biblioteca de JavaScript utilizada para construir la interfaz de usuario.
+- Node.js: entorno de tiempo de ejecución de JavaScript utilizado para ejecutar el servidor.
+- Firebase: plataforma de desarrollo de aplicaciones web utilizada para el almacenamiento de datos y la autenticación de usuarios.
+- HTML y CSS: lenguajes de marcado utilizados para la estructura y el diseño de la interfaz de usuario.
+
+## Instalación
+
+1. Clona este repositorio en tu máquina local.
+2. Navega hasta la carpeta del proyecto: `cd modern-app`.
+3. Instala las dependencias: `npm install`.
+4. Configura las variables de entorno en un archivo `.env` con la información de tu base de datos Firebase y otras configuraciones necesarias.
+5. Inicia la aplicación: `npm start`.
+6. Abre tu navegador y accede a `http://localhost:3000` para ver la aplicación en funcionamiento.
+
+## Contribución
+
+Si deseas contribuir a este proyecto, ¡serás bienvenido! 
